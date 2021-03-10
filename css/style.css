@@ -1,0 +1,206 @@
+:root{
+    --white:#ffffff;
+    --black:#000000;
+    --not-hover:rgba(196, 196, 196, 0.616);
+    --img-hover: #838383;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    
+    font-size: 65.2%;
+    scroll-behavior: smooth;
+}
+body,
+input{
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    color: var(--black);
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h3,
+h4 {
+    font-weight: 500;
+}
+/*
+======================
+Header
+======================
+*/
+.header{
+   
+   height:13rem;
+    
+    
+}
+.header-top{
+    height: 8rem;
+    width: 95%;
+    max-width: 1280px;
+    line-height: 8rem;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+  
+}
+.header-search{
+    width: 22rem;
+    position: relative;
+}
+.header-search input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: .2rem solid var(--not-hover);
+    padding-left: 2rem;
+}
+input::placeholder{
+    font-size: 1.2rem;
+}
+.header-search .search-icon{
+    position: absolute;
+    top: 3.1rem;
+    left: 0;
+}
+.header-logo{
+    padding-top: 1rem;
+    margin-left: 33.5rem;
+}
+.header-mng{
+    color: var(--img-hover  );
+    margin-left:44rem;
+}
+.header-mng span{
+    font-size: 1rem;
+}
+.mng-sign{
+    padding-bottom: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+}
+.mng-sign:hover {
+    color: var(--black);
+}
+.mng-sign:hover .toggle-sign {
+    color: var(--black);
+    display: block;
+}
+.mng-sign__ico{
+    font-size: 1rem;
+}
+.mng-sign:hover .mng-sign__ico{
+    transform: rotate(180deg);
+    
+}
+.mng-cart{
+
+    position: relative;
+    margin-left: 1.5rem;
+    
+}
+.mng-cart:hover{
+    color: #000000;
+}
+.cart-count{
+    position: absolute;
+    width: 1.3rem;
+    height: 1.5rem;
+    top:-1rem;
+    right: -1rem;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+.cart-count span{
+   
+    font-size: 1.5rem;
+    
+}
+
+
+.toggle-sign{
+    position: absolute;
+    top: 1.7rem;
+    right: 0rem;
+    min-width: 25rem;
+    min-height: 15rem;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+    cursor:context-menu;
+}
+.toggle-sign p{
+    font-size: 1.4rem;
+    height: 5rem;
+    line-height: 5rem;
+}
+.toggle-line{
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.2);
+}
+.toggle-box{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: space-around;
+    align-items: center;
+}
+.toggle-box .toggle-login{
+    margin-top: 2rem; 
+    width: 20rem;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.6rem;
+    position: relative;
+    overflow: hidden;
+}
+.toggle-login::before{
+    content: "Login";
+    position: absolute;
+    left: 0;
+    border:1px solid #000000;
+    width: 19.8rem;
+    height: 3.8rem;
+    line-height: 4rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1.6rem;
+    transition:all 0.2s;
+    transform: scale(3);
+    opacity: 0;
+}
+.toggle-login:hover::before{
+    transform: scale(1);
+    opacity: 1;
+}
+.toggle-box .toggle-signUp{
+    width: 65%;
+    padding-top: .3rem;
+    height: 3rem;
+    line-height: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
