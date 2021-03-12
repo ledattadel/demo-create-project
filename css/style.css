@@ -221,7 +221,7 @@ input::placeholder{
     
     /* position: relative; */
 }
-.header-nav a::before{
+.nav-element > a::before{
     content: "";
     position: absolute;
     width: 0%;
@@ -230,12 +230,12 @@ input::placeholder{
     top: 3rem;
     transition: all .3s; 
 }
-.header-nav li:hover  a::before{
+.nav-element:hover  a::before{
     width: 100%;
     
 }
 
-.header-nav li:hover i{
+.nav-element:hover > a > i{
     
     transform: rotate(180deg);
     /* transform: translateX(.1rem); */
@@ -255,20 +255,20 @@ input::placeholder{
     font-size: 1.2rem;
 }
 
-.header-nav li > div{
+.nav-element > div{
     position: absolute;
     background-color: #ffffff;
     width:100%;
     left: 0;
     border-top: 1px solid var(--img-hover);
     border-bottom: 1px solid var(--img-hover);
-    height: 60vh;
+   
     animation: rotateY .6s ease-in-out forwards;
     transform-origin: top center;
 
     display: none;
 }
-.header-nav li:hover > div{
+.nav-element:hover > div{
     display: block;
 }
 
@@ -285,3 +285,135 @@ input::placeholder{
     }
 }
 
+.nav-child-1{
+    width: 100%;
+   
+}
+.subnav-father{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-left: 7rem;
+    display: flex;
+   flex-direction: row;
+   position: relative;
+}
+/* .subnav-father li{
+    cursor: pointer;
+} */
+.subnav-father .nav-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   padding-bottom: 10rem;
+}
+.subnav-father::before{
+    content: "";
+    position: absolute;
+    height: 20rem;
+    width: .1rem;
+    background-color: var(--not-hover);
+    top: 5rem;
+    left: 25.6rem;
+    
+}
+.subnav-father .nav-main li a{
+    font-weight: 500;
+    position: relative;
+}
+
+.subnav-father .nav-main li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: .1rem;
+    background-color: #000000;
+    bottom: 0;
+    transition: all 0.3s;
+}
+.subnav-father .nav-main li:last-child{
+    
+    position: relative;
+}
+
+.subnav-father .nav-main li:last-child a::before{
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: .2rem;
+    background-color: #000000;
+    top: .8rem;
+    right: -2rem;
+    transition: all 0.3s;
+} 
+.subnav-father .nav-main i {
+    position: absolute;
+    top: .428rem;
+    right: -2.2rem;
+    transition: all 0.3s;
+}
+.subnav-father .nav-main li:last-child:hover a::before{
+   width: 2rem;
+   transform: translateX(2rem);
+} 
+.subnav-father .nav-main li:last-child:hover i  {
+    transform: translateX(2rem);
+}
+
+
+.subnav-father .nav-main li:not(:last-child):hover a::before{
+    
+    width: 100%;
+   
+    
+}
+
+.subnav-father .subnav-child{
+    padding-left: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.subnav-father .subnav-child li:first-child{
+    margin-top: 1rem;
+}
+.subnav-father .subnav-child li a{
+    font-size: 1.2rem;
+    line-height: 3.5rem;
+    color: var(--img-hover);
+}
+.subnav-father .subnav-child li:hover a{
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+.nav-child-1{
+    cursor: default;
+}
+.bands::before{
+    display: none;
+}
+.bands{
+    padding-bottom: 5rem;
+}
+.last-nav-element:hover > a{
+    color: red;
+}
+.last-nav-element:hover > a > i{
+    color: var(--black);
+}
+
+
+
+
+
+/* END : HEADER */
+.Head-Background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/Header/_D_Homepage_1440_Compressed.gif");
+}
